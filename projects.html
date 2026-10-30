@@ -1,0 +1,16 @@
+---
+title: Projects
+lede: ""
+---
+<!-- Content comes from _data/projects.yml. Link to one project with /projects/#<id>, e.g. /projects/#jawi -->
+{% for pr in site.data.projects %}
+<article class="project-full" id="{{ pr.id }}">
+  {% if pr.image and pr.image != "" %}<img class="project-img" src="{{ pr.image | relative_url }}" alt="">{% else %}<div></div>{% endif %}
+  <div>
+    <h2><a class="anchor" href="#{{ pr.id }}">{{ pr.title }}</a></h2>
+    <p class="project-summary">{{ pr.summary }}</p>
+    {% if pr.description and pr.description != "" %}<div class="prose">{{ pr.description | markdownify }}</div>{% endif %}
+    {% if pr.link and pr.link != "" %}<p><a class="button button-ghost" href="{{ pr.link }}" target="_blank" rel="noopener">{{ pr.link_label | default: "Project website" }} ↗</a></p>{% endif %}
+  </div>
+</article>
+{% endfor %}

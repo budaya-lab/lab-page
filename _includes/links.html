@@ -1,0 +1,2 @@
+{% comment %}Renders a links hash as buttons, skipping empty values and `email` (shown as plain text instead). Usage: {% include links.html links=item.links %}{% endcomment %}
+{% if include.links %}<span class="links">{% for l in include.links %}{% if l[0] != "email" and l[1] and l[1] != "" %}<a href="{{ l[1] }}" target="_blank" rel="noopener">{{ l[0] }}</a>{% endif %}{% endfor %}</span>{% endif %}

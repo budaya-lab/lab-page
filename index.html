@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<section class="hero">
+  <img class="hero-logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="Budaya Lab logo: a gunungan shape containing a neural network">
+  <div class="hero-text">
+    <p class="eyebrow">{{ site.institution }}</p>
+    <h1>{{ site.title }}</h1>
+    <p class="lede">{{ site.tagline }}.</p>
+    <p class="hero-actions">
+      <a class="button" href="{{ '/projects/' | relative_url }}">Our projects</a>
+      <a class="button button-ghost" href="{{ '/join/' | relative_url }}">Join the lab</a>
+    </p>
+  </div>
+  <aside class="hero-news">
+    <h2 class="section-title">News</h2>
+    {% assign news = site.data.news | sort: "date" | reverse %}
+    <ul class="news-list">
+      {% for n in news limit: 4 %}
+        <li><time>{{ n.date | date: "%b %Y" }}</time><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+      {% endfor %}
+    </ul>
+    <p class="small"><a href="{{ '/news/' | relative_url }}">All news →</a></p>
+  </aside>
+</section>
+
+<section class="home-projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="cards">
+    {% for pr in site.data.projects %}{% include project-card.html project=pr %}{% endfor %}
+  </div>
+</section>
+
+{% if site.external.github != "" or site.external.huggingface != "" %}
+<section class="open-strip">
+  <h2 class="section-title">Code, models and data</h2>
+  <p class="muted">[Placeholder] We release our code on GitHub and our models and datasets on Hugging Face, with licences and usage terms agreed with the communities and archives we work with.</p>
+  <div class="cards">
+    {% if site.external.github != "" %}<a class="card card-link" href="{{ site.external.github }}" target="_blank" rel="noopener"><h3>GitHub ↗</h3><p>Source code for our papers and tools.</p></a>{% endif %}
+    {% if site.external.huggingface != "" %}<a class="card card-link" href="{{ site.external.huggingface }}" target="_blank" rel="noopener"><h3>Hugging Face ↗</h3><p>Trained models and datasets, grouped by project.</p></a>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+<section>
+  <h2 class="section-title">Recent papers</h2>
+  {% assign recent = site.data.papers | sort: "Year" | reverse %}
+  <ul class="paper-list">
+    {% for p in recent limit: 3 %}{% include paper.html paper=p %}{% endfor %}
+  </ul>
+  <p><a href="{{ '/papers/' | relative_url }}">All papers →</a></p>
+</section>

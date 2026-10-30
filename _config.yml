@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------
+# Budaya Lab website — site settings
+# Content lives in _data/ (people, projects, news .yml; papers.csv).
+# ---------------------------------------------------------------
+title: Budaya Lab
+tagline: Computational methods for documenting and analyzing cultural heritage in Southeast Asia
+description: >-
+  Budaya Lab develops computational methods for documenting and
+  analyzing the cultural heritage of Southeast Asia.
+institution: "National University of Singapore"
+
+# External homes for code, models, datasets and the internal wiki.
+# These appear in the top menu, on the home page and in the footer.
+# Leave a value empty ("") to hide that link everywhere.
+external:
+  github: "https://github.com/budaya-lab"
+  huggingface: "https://huggingface.co/budaya-lab"
+  data: "https://data.budaya-lab.org"
+  wiki: "https://budaya-lab.notion.site/RSE-Handbook-405fcb0b33a38198aa96f624eba0a035"
+
+# If the site is served from https://<user>.github.io/<repo>/ set baseurl to "/<repo>".
+# If it is served from a custom domain or <org>.github.io, leave it empty.
+url: ""
+baseurl: ""
+
+# bom|utf-8 lets Jekyll read CSV files that start with a byte-order mark
+# (Google Scholar and Excel exports do), so the first column name stays "Authors".
+encoding: "bom|utf-8"
+
+markdown: kramdown
+permalink: pretty
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - build.py
+  - _html

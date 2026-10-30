@@ -1,0 +1,10 @@
+---
+title: News
+---
+<!-- Content comes from _data/news.yml -->
+{% assign news = site.data.news | sort: "date" | reverse %}
+<ul class="news-list news-list-full">
+  {% for n in news %}
+    <li><time>{{ n.date | date: "%-d %b %Y" }}</time><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+  {% endfor %}
+</ul>

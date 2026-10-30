@@ -1,0 +1,33 @@
+# Projects, in the order they appear on the home page and the Projects page.
+# id:          short slug; the project's section is at /projects/#<id>
+# summary:     one or two sentences, shown on the home page card and at the top of the project's section
+# description: longer text for the Projects page (Markdown; start with `|` and indent for several paragraphs)
+# image:       optional path under assets/img/projects/
+# link:        optional external URL (project site, GitHub repo, Hugging Face collection)
+# link_label:  optional text for that button (default "Project website")
+
+- id: jawi
+  title: "The Jawi AI Project"
+  summary: "AI tools for reading, searching and analysing historical Malay documents in Jawi script."
+  description: |
+    AI tools for historical documents in Malay (in the Jawi Script). This project includes a range of tools for OCR, transliteration, classification, information extraction and semantic search. We aim to enable the systematic analysis of Jawi print media published in Singapore and its neighbors.
+  image: "assets/img/projects/jawi.png"
+  link: "https://jawi.budaya.sg"
+
+- id: tas
+  title: "Video Segmentation for Intangible Cultural Heritage"
+  summary: "Segmenting recordings of performances into meaningful actions, with Wayang Kulit as a case study."
+  description: |
+    A complete pipeline for collecting, annotating, and modeling temporal action segmentation data—with a special focus on cultural analytics. Our case study centers on Wayang Kulit (Indonesian shadow puppetry), showcasing how machine learning can be applied to analyze performance-based materials.
+  image: "assets/img/projects/tas.png"
+  link: "https://github.com/villaorlado/tas-for-ca"
+  link_label: "Code on GitHub"
+
+- id: simulations
+  title: "Computational Social Simulations for Cultural Policy"
+  summary: "Using LLMs to simulate how different communities might respond to heritage policies."
+  description: |
+    Using LLMs to simulate the range of reactions different communities might have to heritage-related policies, in order support more open, informed public dialogue about shared heritage. This is part of a larger programme which explores LLM-based social simulation for policy design.
+  image: "assets/img/projects/simulations.png"
+  link: "https://cssh.nus.edu.sg/computational-social-simulations-for-aiding-policy-design/"
+  link_label: "Programme page"

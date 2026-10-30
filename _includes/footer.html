@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>{{ site.title }}</strong><br>
+      {{ site.institution }}<br>
+      {{ site.address }}
+    </div>
+    <div class="footer-links">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      {% include external-links.html %}
+    </div>
+  </div>
+</footer>

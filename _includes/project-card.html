@@ -1,0 +1,8 @@
+{% comment %}Home page card: short summary, links to the project's section on the Projects page.{% endcomment %}
+{% assign pr = include.project %}
+<a class="card card-link project" href="{{ '/projects/' | relative_url }}#{{ pr.id }}">
+  {% if pr.image and pr.image != "" %}<img class="card-img" src="{{ pr.image | relative_url }}" alt="">{% endif %}
+  <h3>{{ pr.title }}</h3>
+  <p>{{ pr.summary }}</p>
+  <span class="more">Read more →</span>
+</a>

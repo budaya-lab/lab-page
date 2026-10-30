@@ -1,0 +1,15 @@
+{% assign m = include.person %}
+<div class="person">
+  {% if m.photo and m.photo != "" %}
+    <img class="avatar" src="{{ m.photo | relative_url }}" alt="{{ m.name }}">
+  {% else %}
+    <div class="avatar avatar-placeholder" aria-hidden="true">{{ m.name | remove: "[" | slice: 0 }}</div>
+  {% endif %}
+  <div>
+    <h3>{{ m.name }}</h3>
+    <p class="person-title">{{ m.title }}</p>
+    {% if m.bio and m.bio != "" %}<p class="person-bio">{{ m.bio }}</p>{% endif %}
+    {% if m.links.email and m.links.email != "" %}<p class="person-email">{{ m.links.email }}</p>{% endif %}
+    {% include links.html links=m.links %}
+  </div>
+</div>

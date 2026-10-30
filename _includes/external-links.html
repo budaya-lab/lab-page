@@ -1,0 +1,5 @@
+{% comment %}External links from `external:` in _config.yml. Empty values are skipped.{% endcomment %}
+{% if site.external.github and site.external.github != "" %}<a class="ext" href="{{ site.external.github }}" target="_blank" rel="noopener">GitHub<span class="ext-arrow">↗</span></a>{% endif %}
+{% if site.external.huggingface and site.external.huggingface != "" %}<a class="ext" href="{{ site.external.huggingface }}" target="_blank" rel="noopener">Hugging Face<span class="ext-arrow">↗</span></a>{% endif %}
+{% if site.external.data and site.external.data != "" %}<a class="ext" href="{{ site.external.data }}" target="_blank" rel="noopener">Data<span class="ext-arrow">↗</span></a>{% endif %}
+{% if site.external.wiki and site.external.wiki != "" %}<a class="ext" href="{{ site.external.wiki }}" target="_blank" rel="noopener">Wiki<span class="ext-arrow">↗</span></a>{% endif %}

@@ -1,0 +1,12 @@
+# News items. Dates as YYYY-MM-DD. The site sorts them newest first.
+# `text` accepts Markdown (links, emphasis). Link to pages on this site from the root,
+# e.g. [Jawi AI Project](/projects/#jawi), so the link works on both the home and news pages.
+
+- date: 2026-10-30
+  text: "We are looking for a PhD researcher and a Postdoctoral Fellow, as part of [Computational Social Simulations for Cultural Policy](/projects/#simulations)."
+
+- date: 2026-10-28
+  text: "Miguel Escobar Varela will be a keynote speaker at 17th International Conference of Digital Archives and Digital Humanities (Taiwan)."
+
+- date: 2026-10-26
+  text: "Miguel Escobar Varela gave a keynote at International Conference on Digital Humanities and Environmental Sustainability (CoDHES 2026) in Jakarta."

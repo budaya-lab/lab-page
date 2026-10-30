@@ -1,0 +1,12 @@
+# Top menu, in order. Pages on this site:
+- title: Projects
+  url: /projects/
+- title: Papers
+  url: /papers/
+- title: People
+  url: /people/
+- title: News
+  url: /news/
+- title: Join
+  url: /join/
+# External links are taken from `external:` in _config.yml (GitHub, Hugging Face, Wiki).

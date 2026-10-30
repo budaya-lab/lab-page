@@ -1,0 +1,11 @@
+---
+title: Papers
+---
+<!-- Content comes from _data/papers.csv, grouped by year -->
+{% assign years = site.data.papers | group_by: "Year" | sort: "name" | reverse %}
+{% for y in years %}
+  <h2 class="section-title">{{ y.name }}</h2>
+  <ul class="paper-list">
+    {% for p in y.items %}{% include paper.html paper=p %}{% endfor %}
+  </ul>
+{% endfor %}

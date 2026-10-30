@@ -1,0 +1,15 @@
+---
+title: People
+---
+<!-- Content comes from _data/people.yml. Groups and their order are defined below. -->
+{% assign groups = "pi:Principal Investigator|postdoc:Postdoctoral Researchers|phd:PhD Students|masters:Masters Students|undergrad:Undergraduate Researchers|staff:Staff|alumni:Alumni" | split: "|" %}
+{% for g in groups %}
+  {% assign parts = g | split: ":" %}
+  {% assign members = site.data.people | where: "role", parts[0] %}
+  {% if members.size > 0 %}
+    <h2 class="section-title">{{ parts[1] }}</h2>
+    <div class="people{% if parts[0] == 'alumni' %} people-compact{% endif %}">
+      {% for m in members %}{% include person.html person=m %}{% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}

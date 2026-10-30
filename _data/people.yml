@@ -1,0 +1,63 @@
+# People. Each entry needs `name` and `role`; everything else is optional.
+# role must be one of: pi | postdoc | phd | masters | undergrad | staff | alumni
+# photo: path under assets/img/people/ (leave empty for an initials placeholder)
+# links: any of website, email, scholar, github, orcid, twitter, linkedin
+
+- name: "Miguel Escobar Varela"
+  role: pi
+  title: "Associate Professor"
+  photo: ""
+  bio: "Associate Professor at the Faculty of Arts and Social Sciences and Co-Director of the Centre for Computational Social Science and Humanities (CSSH)."
+  links:
+    website: "https://miguelescobar.com"
+    email: "m [dot] escobar [at] nus [dot] edu [dot] sg"
+    scholar: ""
+    github: ""
+
+- name: "Jose Miguel Vieira"
+  role: staff
+  title: "Senior Research Software Engineer"
+  photo: ""
+  bio: ""
+  links:
+    email: "jose.m.vieira@nus.edu.sgalvin [dot] shrestha [at] nus [dot] edu [dot] sg"
+
+- name: "Alvin Shrestha"
+  role: staff
+  title: "Research Software Engineer"
+  photo: ""
+  bio: ""
+  links: 
+    email: "alvin [dot] shrestha [at] nus [dot] edu [dot] sg"
+
+- name: "Tarin Pairor"
+  role: staff
+  title: "Research Assistant (Computer Vistion)"
+  photo: ""
+  bio: ""
+  links:
+    email: "tarinpairor [at] nus [dot] edu [dot] sg"
+
+- name: "Yashwit Polapragada"
+  role: staff
+  title: "Research Software Engineer (NLP)"
+  photo: ""
+  bio: ""
+  links:
+    email: "yashwitp [at] nus [dot] edu [dot] sg"
+
+- name: "Hamza Karabağ"
+  role: alumni
+  title: "Visiting Student Researcher (Computer Vision)"
+  photo: ""
+  bio: ""
+  links:
+    email: "karabagh20 [at] itu [dot] edu [dot] tr"
+
+- name: "Shawn Liew Hong Wei"
+  role: alumni
+  title: "Part-time Research Assistant"
+  photo: ""
+  bio: ""
+  links:
+    email: "shawnliew [at] nus [dot] edu [dot] sg"

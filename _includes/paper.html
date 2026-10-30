@@ -1,0 +1,7 @@
+{% comment %}One row of _data/papers.csv (columns: Authors, Title, Publication, Volume, Number, Pages, Year, Publisher).{% endcomment %}
+{% assign p = include.paper %}
+<li class="paper">
+  <span class="paper-title">{{ p.Title }}</span>
+  <span class="paper-authors">{{ p.Authors | strip | split: ";" | join: ";" }}</span>
+  <span class="paper-venue">{{ p.Publication }}{% if p.Volume and p.Volume != "" %} {{ p.Volume }}{% if p.Number and p.Number != "" %}({{ p.Number }}){% endif %}{% endif %}{% if p.Pages and p.Pages != "" %}, pp. {{ p.Pages }}{% endif %}{% if p.Publisher and p.Publisher != "" %} · {{ p.Publisher }}{% endif %}</span>
+</li>
