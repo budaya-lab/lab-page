@@ -14,13 +14,18 @@
     scholar: ""
     github: ""
 
-- name: "Jose Miguel Vieira"
+- name: "José Miguel Vieira"
   role: staff
-  title: "Senior Research Software Engineer"
+  title: "Principal Research Software Engineer"
   photo: ""
-  bio: ""
+  bio: Principal Research Software Engineer working on digital
+    humanities and computational social science at the National University of
+    Singapore. He has twenty years of experience building sustainable research
+    software — web applications, data pipelines, NLP, and applied machine
+    learning — for humanities and cross-disciplinary research.
   links:
-    email: "jose.m.vieira@nus.edu.sgalvin [dot] shrestha [at] nus [dot] edu [dot] sg"
+    website: "https://jmiguelv.github.io"
+    email: "jose [dot] m [dot] vieira [at] nus [dot] edu [dot] sg"
 
 - name: "Alvin Shrestha"
   role: staff
