@@ -6,7 +6,7 @@
 - name: "Miguel Escobar Varela"
   role: pi
   title: "Associate Professor"
-  photo: ""
+  photo: "assets/img/people/mev.jpg"
   bio: "Associate Professor at the Faculty of Arts and Social Sciences and Co-Director of the Centre for Computational Social Science and Humanities (CSSH)."
   links:
     website: "https://miguelescobar.com"
@@ -17,7 +17,7 @@
 - name: "José Miguel Vieira"
   role: staff
   title: "Principal Research Software Engineer"
-  photo: ""
+  photo: "assets/img/people/vieira.jpg"
   bio: Principal Research Software Engineer working on digital
     humanities and computational social science at the National University of
     Singapore. He has twenty years of experience building sustainable research
@@ -30,15 +30,15 @@
 - name: "Alvin Shrestha"
   role: staff
   title: "Research Software Engineer"
-  photo: ""
-  bio: ""
+  photo: "assets/img/people/alvin.jpg"
+  bio: 
   links: 
     email: "alvin [dot] shrestha [at] nus [dot] edu [dot] sg"
 
 - name: "Tarin Pairor"
   role: staff
   title: "Research Assistant (Computer Vistion)"
-  photo: ""
+  photo: "assets/img/people/tarin.jpeg"
   bio: ""
   links:
     email: "tarinpairor [at] nus [dot] edu [dot] sg"
@@ -46,7 +46,7 @@
 - name: "Yashwit Polapragada"
   role: staff
   title: "Research Software Engineer (NLP)"
-  photo: ""
+  photo: "assets/img/people/yash.jpg"
   bio: ""
   links:
     email: "yashwitp [at] nus [dot] edu [dot] sg"
