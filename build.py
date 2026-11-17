@@ -8,7 +8,7 @@ Output uses relative links, so it can be opened from disk or uploaded to any web
 """
 import re, sys, os, csv, shutil, glob, datetime, yaml, markdown, jinja2
 
-SRC, OUT = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else (os.path.dirname(os.path.abspath(__file__)), os.path.join(os.path.dirname(os.path.abspath(__file__)), "_html"))
+SRC, OUT = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else (os.path.dirname(os.path.abspath(__file__)), os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs"))
 shutil.rmtree(OUT, ignore_errors=True); os.makedirs(OUT)
 cfg = yaml.safe_load(open(f"{SRC}/_config.yml"))
 
@@ -95,7 +95,7 @@ def url_for(path):
 pages = []
 for f in glob.glob(f"{SRC}/**/*.*", recursive=True):
     r = os.path.relpath(f, SRC)
-    if r.startswith(("_", "assets", ".")) or r in ("README.md", "Gemfile"): continue
+    if r.startswith(("_", "assets", ".", "docs")) or r in ("README.md", "Gemfile"): continue
     if not f.endswith((".md", ".html")): continue
     fm, body = split_fm(open(f).read()); fm.update(url=url_for(f), _src=f, _body=body); pages.append(fm)
 
@@ -114,6 +114,9 @@ for p in pages:
     d = OUT + p["url"]; os.makedirs(d, exist_ok=True)
     open(d + "index.html", "w").write(render(p)); print("built", p["url"])
 shutil.copytree(f"{SRC}/assets", f"{OUT}/assets")
+# GitHub Pages reads the custom domain from CNAME inside the published folder,
+# and the rmtree above wipes it, so copy it back in on every build.
+if os.path.exists(f"{SRC}/CNAME"): shutil.copy(f"{SRC}/CNAME", f"{OUT}/CNAME")
 
 # Make every internal link relative so the site works from any folder,
 # including when opened directly from disk (file://).
