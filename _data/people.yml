@@ -31,13 +31,13 @@
   role: staff
   title: "Research Software Engineer"
   photo: "assets/img/people/alvin.jpg"
-  bio: 
-  links: 
+  bio:
+  links:
     email: "alvin [dot] shrestha [at] nus [dot] edu [dot] sg"
 
 - name: "Tarin Pairor"
   role: staff
-  title: "Research Assistant (Computer Vistion)"
+  title: "Research Assistant (Computer Vision)"
   photo: "assets/img/people/tarin.jpeg"
   bio: ""
   links:
@@ -47,8 +47,9 @@
   role: staff
   title: "Research Software Engineer (NLP)"
   photo: "assets/img/people/yash.jpg"
-  bio: ""
+  bio: "Research Software Engineer exploring novel applications of LLMs to the Social Sciences, with a focus on benchmarking & interpretability."
   links:
+    website: "https://yashwit.com"
     email: "yashwitp [at] nus [dot] edu [dot] sg"
 
 - name: "Hamza Karabağ"
