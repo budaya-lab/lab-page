@@ -8,7 +8,7 @@ Output uses relative links, so it can be opened from disk or uploaded to any web
 """
 import re, sys, os, csv, shutil, glob, datetime, yaml, markdown, jinja2
 
-SRC, OUT = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else (os.path.dirname(os.path.abspath(__file__)), os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs"))
+SRC, OUT = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else (os.path.dirname(os.path.abspath(__file__)), os.path.join(os.path.dirname(os.path.abspath(__file__)), "_html"))
 shutil.rmtree(OUT, ignore_errors=True); os.makedirs(OUT)
 cfg = yaml.safe_load(open(f"{SRC}/_config.yml"))
 
